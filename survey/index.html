@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <main>
+        <div class="survey">
+            <h1 id="title">Customer Satisfaction Survey</h1>
+            <p style="text-align: center;" id="description">Please, answer the questions below to show us how was your
+                trip. <br>Your feedback is important to us.</p>
+            <form id="survey-form">
+                <legend>Your details</legend>
+                <fieldset>
+                    <ol>
+                        <li>
+                            <label for=name id="name-label">Name</label>
+                            <input id=name name=name type=text placeholder="First and last name" required autofocus>
+                        </li>
+                        <li>
+                            <label for=email id="email-label">Email</label>
+                            <input id=email name=email type=email placeholder="example@domain.com" required>
+                        </li>
+                        <li>
+                            <label for=age id="number-label">Age</label>
+                            <input id=number name=age type=number min="18" max="110" placeholder="age" required>
+                        </li>
+                    </ol>
+                </fieldset>
+                <fieldset>
+                    <ol>
+                        <li>
+                            <label>Which country did you visit with our company?</label>
+                            <select id="dropdown" required>
+                                <option value="USA">USA</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Brazil">Brazil</option>
+                            </select>
+                        </li>
+                    </ol>
+                </fieldset>
+                <legend>Your trip details</legend>
+                <fieldset>
+                    <label>How likely is it that you would recommend our company to a friend or
+                        colleague?</label>
+                    <ol>
+                        <li><input type="radio" name="recommends" id="recommends" value="extr-likely">
+                            <label for="recommends">Extremely likely</label></li>
+                        <li><input type="radio" name="recommends" id="recommends" value="some-likely">
+                            <label for="recommends">Somewhat likely</label></li>
+                        <li><input type="radio" name="recommends" id="recommends" value="not-so-likely">
+                            <label for="recommends">Not so likely</label></li>
+                        <li><input type="radio" name="recommends" id="recommends" value="not-likely">
+                            <label for="recommends">Not at all</label></li>
+                    </ol>
+                </fieldset>
+                <fieldset>
+                    <label>How well do our products meet your needs?</label>
+                    <ol>
+                        <li><input type="radio" name="needs" id="needs" value="excel">
+                            <label for="needs">Excellent</label></li>
+                        <li><input type="radio" name="needs" id="needs" value="some">
+                            <label for="needs">Somewhat</label></li>
+                        <li><input type="radio" name="needs" id="needs" value="not">
+                            <label for="needs">Not at all</label></li>
+                    </ol>
+                </fieldset>
+                <fieldset>
+                    <label>Overall, how satisfied or dissatisfied are you with our company?</label>
+                    <ol>
+                        <li><input type="radio" name="satisfact" id="satisfact" value="extr">
+                            <label for="satisfact">Extremely satisfied</label></li>
+                        <li><input type="radio" name="satisfact" id="satisfact" value="some">
+                            <label for="satisfact">Somewhat satisfied</label></li>
+                        <li><input type="radio" name="satisfact" id="satisfact" value="not-so">
+                            <label for="satisfact">Not so satisfied</label></li>
+                        <li><input type="radio" name="satisfact" id="satisfact" value="not">
+                            <label for="satisfact">Not satisfied at all</label></li>
+                    </ol>
+                </fieldset>
+                <fieldset>
+                    <label>Which of the following words would you use to describe our products? Select
+                        all that apply.</label>
+                    <ol>
+                        <li><input type="checkbox" name="checkbox-1" id="checkbox-1" value="one">
+                            <label for="checkbox-1">I can trust</label></li>
+                        <li><input type="checkbox" name="checkbox-1" id="checkbox-1" value="two">
+                            <label for="checkbox-1">Good quality</label></li>
+                        <li><input type="checkbox" name="checkbox-1" id="checkbox-1" value="tree">
+                            <label for="checkbox-1">Friendly staff</label></li>
+                        <li><input type="checkbox" name="checkbox-1" id="checkbox-1" value="four">
+                            <label for="checkbox-1">Easy to order</label></li>
+                        <li><input type="checkbox" name="checkbox-1" id="checkbox-1" value="five">
+                            <label for="checkbox-1">Responsive management</label></li>
+                    </ol>
+                </fieldset>
+                <legend>Your thougths</legend>
+                <fieldset>
+                    <label>Do you have any other comments, questions, or concerns?</label><br>
+                    <textarea name="conserns" id="conserns" cols="130" rows="5" maxlength="450"
+                        placeholder="Please, don't hesitate to write us..." spellcheck="true"></textarea>
+                </fieldset>
+                <fieldset>
+                    <button id="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

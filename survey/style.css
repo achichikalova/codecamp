@@ -1,0 +1,112 @@
+html,
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 30px;
+}
+
+form,
+fieldset,
+legend,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.survey {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px;
+}
+
+form {
+    height: auto;
+    background-color: #e8f0db;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px 2px #e2e2e1;
+}
+
+ol,
+li {
+    list-style: none;
+    margin-top: 5px;
+}
+
+fieldset {
+    border: none;
+    background-color: #88b04b88;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+legend {
+    font-size: 20px;
+    padding: 15px 15px 0 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+#number-label {
+    margin-right: 15px;
+}
+
+
+textarea {
+    background: #ffffff;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    font: 15px Georgia, "Times New Roman", Times, serif;
+    outline: none;
+    padding: 5px;
+    width: auto;
+    max-width: 600px;
+    margin: 10px;
+}
+
+button {
+    background-color: #fff;
+    border: solid 1px #577030;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    color: #88B04B;
+    display: block;
+    font: 18px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8fb15d9d;
+    color: #fff;
+}
