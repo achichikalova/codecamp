@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Product Landing Page</title>
 </head>
 
@@ -34,12 +35,9 @@
             <h3>welcome to our studio!</h3>
             <h1>it's nice to meet you</h1>
         </div>
-        <div id="video">
-            <video width="350" src="https://www.youtube.com/embed/W8dfY-KPAfE" controls> Your browser does not support
-                HTML
-                video.</video>
-        </div>
-
+        <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/zm7hX2R6Yyo" frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
     </section>
     <main>
         <!-- Features -->
@@ -49,13 +47,35 @@
                     <h3>Feature</h3>
                 </div>
             </div>
-            <div class="items-container">
-                <div class="item">
-                    <img src="" alt="">
-                    <h4>Item 1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum quis harum eligendi,
-                        accusantium sapiente?</p>
+            <div class="cards-box">
+                <div class="card">
+                    <div class="card__box">
+                        <div class="content"></div>
+                        <h2>01</h2>
+                        <h3>Item 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum quis harum eligendi,
+                            accusantium sapiente?</p>
+                        <a href="#" target="_blank">Read More</a>
+                    </div>
                 </div>
+                <!--  <div class="card__box">
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>Item 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum quis harum eligendi,
+                            accusantium sapiente?</p>
+                        <a href="#" target="_blank">Read More</a>
+                    </div>
+                </div>
+                <div class="card__box">
+                    <div class="content">
+                        <h2>03</h2>
+                        <h3>Item 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laborum quis harum eligendi,
+                            accusantium sapiente?</p>
+                        <a href="#" target="_blank">Read More</a>
+                    </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -65,31 +85,65 @@
             <h3>Contact Us</h3>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
         </div>
-        <!-- Contact Us Form -->
-        <div class="form">
-            <form action="https://www.freecodecamp.com/email-submit" id="form">
-                <div class="contact-form">
-                    <fieldset class="col1">
-                        <input type="text" name="name" placeholder="your name*" required autofocus>
-                        <div class="space"></div>
-                        <input type="email" name="email" id="email" placeholder="example@domain.com*" required>
-                        <div class="space"></div>
-                        <input type="text" name="suject" id="suject" placeholder="subject*" required>
-                    </fieldset>
-                    <fieldset class="col2">
-                        <textarea name="name" placeholder="your message*" required></textarea>
-                    </fieldset>
+        <!-- New Contact Us Form -->
+        <div class="contact">
+            <div class="contact__info">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h4>Address</h4>
+                        <p>5312 Sweet Street, <br> Ottawa, Ontario, <br> S5E7S1</p>
+                    </div>
                 </div>
-                <div class="button">
-                    <button id="submit">Submit</button>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></i></div>
+                    <div class="text">
+                        <h4>Email</h4>
+                        <p>lorem@ipsum.copy</p>
+                    </div>
                 </div>
-            </form>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h4>Phone</h4>
+                        <p>(458)532-5478</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__form">
+                <form action="https://www.freecodecamp.com/email-submit" id="form">
+                    <h2>Send Message</h2>
+                    <div class="input-box">
+                        <input type="text" name="" id="" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="" id="" placeholder="lorem@ipsum.com" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="" id="" cols="30" rows="10" required></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" name="" value="Send" required>
+                    </div>
+                </form>
+            </div>
         </div>
+        <!-- /Contact Us -->
+
     </section>
     <footer>
-        <div class="copy">&copy; Copyright 2020 SuperSiteCopyright</div>
-        <div class="icons">
-
+        <div class="container">
+            <div class="copy">&copy; Copyright 2020 SuperSiteCopyright</div>
+            <div class="icons">
+                <i class="fa fab fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fab fa-twitter" aria-hidden="true"></i>
+                <i class="fa fab fa-facebook-f" aria-hidden="true"></i>
+                <i class="fa fab fab fa-github" aria-hidden="true"></i>
+                <i class="fa fab fa-instagram" aria-hidden="true"></i>
+            </div>
         </div>
     </footer>
 
