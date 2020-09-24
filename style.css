@@ -4,6 +4,8 @@ body {
     font-size: 15px;
     line-height: 1.6;
     color: #333;
+    width: 100vw;
+    height: auto;
 }
 
 *,
@@ -25,14 +27,6 @@ h6 {
     margin: 0;
 }
 
-hr {
-    display: block;
-    width: 100%;
-    height: 1px;
-    border: 0;
-    background-color: #e5e5e5;
-    margin: 50px 0;
-}
 
 ul,
 li {
@@ -45,9 +39,9 @@ li {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    height: 70px;
+    height: 4.6rem;
     overflow: hidden;
-    line-height: 70px;
+    line-height: 4.6rem;
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -57,7 +51,7 @@ li {
 }
 
 .logo img {
-    width: 120px;
+    width: 8rem;
     float: left;
 
 }
@@ -68,9 +62,9 @@ li {
 
 .menu li {
     float: left;
-    width: 120px;
-    height: 70px;
-    line-height: 70px;
+    width: 8rem;
+    height: 4.6rem;
+    line-height: 4.6rem;
     text-align: center;
     list-style: none;
     transition: .2s linear;
@@ -99,7 +93,7 @@ li {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    min-height: 820px;
+    min-height: 54.6rem;
     position: relative;
     background: url('http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_blue_1920x1234.jpg') center no-repeat;
     -webkit-background-size: cover;
@@ -111,13 +105,13 @@ li {
     text-align: center;
 }
 
-h1 {
+.section-header h1 {
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-h3 {
+.section-header h3 {
     font-size: 3rem;
     text-transform: capitalize;
     font-style: italic;
@@ -126,23 +120,24 @@ h3 {
 
 #video {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    width: 600px;
-    height: 330px;
+    width: 50vw;
+    height: 22rem;
 }
 
-iframe {
-    padding: 5px;
+#video iframe {
+    padding: .33rem;
     border-color: #333;
-
 }
 
 /* ----------------------------------------------- */
 /* Feature */
 #feature {
-    position: relative;
     min-height: 100vh;
-    padding: 50px 100px;
+    padding: 0 6.66rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,47 +146,121 @@ iframe {
     color: #fff;
 }
 
-#feature h3 {
-    padding-top: 70px;
+#feature .section-header h3 {
+    font-size: 6rem;
+}
+
+#feature .section-header p {
+    font-size: 1.6rem;
+    font-style: italic;
 }
 
 .cards-box {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 70vw;
-    margin: 40px 0;
+    margin: 2.66rem 0;
+}
+
+.card-box {
+    position: relative;
+    min-width: 21.3rem;
+    height: 29.3rem;
+    box-shadow: inset .33rem .33rem .33rem rgba(0, 0, 0, 0.2),
+        inset -.33rem -.33rem 15px rgba(255, 255, 255, 0.1),
+        .33rem .33rem 15px rgba(0, 0, 0, 0.3),
+        -.33rem -.33rem 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 2rem;
 }
 
 .card {
-    position: relative;
-    min-width: 320px;
-    height: 440px;
-    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-        5px 5px 15px rgba(0, 0, 0, 0.3),
-        -5px -5px 15px rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    margin: 30px;
-}
-
-.card__box {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    top: 1.3rem;
+    left: 1.3rem;
+    right: 1.3rem;
+    bottom: 1.3rem;
     background: #2a2b2f;
     border: 2px solid #1e1f23;
-    border-radius: 15px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    box-shadow: 0 1.3rem 3.33rem rgba(0, 0, 0, 0.5);
     transition: .5s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.card__box:hover {
-    transform: translateY(-50px);
-    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.card-box:hover {
+    transform: translateY(-3.33rem);
+    box-shadow: 0 2.66rem 4.6rem rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    padding: 1.3rem;
+    text-align: center;
+}
+
+.content h2 {
+    position: absolute;
+    top: -.66rem;
+    right: 2rem;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+.content h3 {
+    font-size: 1.8em;
+    z-index: 1;
+    transition: .5s linear;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.content p {
+    font-size: 1.1em;
+    font-weight: 300;
+    z-index: 1;
+    transition: .5s linear;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 1.3rem;
+    background: #000;
+    margin-top: 1rem;
+    border-radius: 1.3rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    box-shadow: 0 .66rem 1.3rem rgba(0, 0, 0, 0.2);
+}
+
+.card-box:nth-child(1) .content a {
+    background: #2196f3;
+}
+
+.card-box:nth-child(2) .content a {
+    background: #e91e63;
+}
+
+.card-box:nth-child(3) .content a {
+    background: #97dc47;
 }
 
 /* ----------------------------------------------- */
@@ -199,7 +268,7 @@ iframe {
 #contact {
     position: relative;
     min-height: 100vh;
-    padding: 50px 100px;
+    padding: 3.33rem 6.66rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,13 +279,15 @@ iframe {
 }
 
 .contact {
+    width: 50vw;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 2rem;
     background-color: rgba(51, 51, 51, 0.6);
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: .33rem;
+    padding: 1.3rem;
 }
 
 .contact__info {
@@ -227,17 +298,17 @@ iframe {
 
 .box {
     position: relative;
-    padding: 20px 0;
+    padding: 1.3rem 0;
     display: flex;
 }
 
 .icon {
-    min-width: 60px;
-    height: 60px;
+    min-width: 4rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 1.5rem;
     background-color: #fff;
     border-radius: 50%;
     color: #333;
@@ -246,8 +317,8 @@ iframe {
 .text {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    font-size: 16px;
+    margin-left: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 300;
 }
 
@@ -258,19 +329,19 @@ iframe {
 
 .contact__form {
     width: 50%;
-    padding: 40px;
+    padding: 2.66rem;
     background: rgba(51, 51, 51, 0.8);
 }
 
 .contact__form h2 {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 500;
 }
 
 .contact__form .input-box {
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    margin-top: .66rem;
 }
 
 #contact .contact .contact__info .contact__form .input-box input {
@@ -280,9 +351,9 @@ iframe {
 .contact__form input,
 .contact__form textarea {
     width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
+    padding: .33rem 0;
+    font-size: 1.1rem;
+    margin: .66rem 0;
     border: none;
     border-bottom: 2px solid linear-gradient(to right, #00bcd4, #ff00aa);
     background-color: transparent;
@@ -309,9 +380,9 @@ iframe {
 .contact__form span {
     position: absolute;
     left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
+    padding: .33rem 0;
+    font-size: 1.1rem;
+    margin: .66rem 0;
     pointer-events: none;
     transition: .5s;
     color: #666;
@@ -322,50 +393,35 @@ iframe {
 .contact__form textarea:focus~span,
 .contact__form textarea:valid~span {
     color: #00bcd4;
-    font-size: 12px;
-    transform: translateY(-20px);
+    font-size: .8rem;
+    transform: translateY(-1.3rem);
 }
 
 /* Send Button */
 .contact__form input[type="submit"] {
-    width: 100px;
+    width: 6.66rem;
     background: #00bcd4;
     color: #fff;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
+    padding: .66rem;
+    font-size: 1.1rem;
 }
 
 .contact__form input[type="submit"]:hover {
-    width: 110px;
+    width: 7.3rem;
 }
 
-/* ----------------------------------------------- */
-@media (max-width: 991px) {
-    #contact {
-        padding: 50px;
-    }
-
-}
-
-@media (max-width:360px) {
-    .contact {
-        flex-direction: column;
-    }
-}
-
-/* ----------------------------------------------- */
 /* Footer */
 footer {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 70px;
+    height: 4.6rem;
     background: #333;
     color: #fff;
     text-align: center;
-    line-height: 70px;
+    line-height: 4.6rem;
 }
 
 .copy {
@@ -376,10 +432,24 @@ footer {
     float: right;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    cursor: pointer;
 }
 
-.icons i+i {
-    margin-left: 20px;
+.icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.icons i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.icons i:hover {
+    color: #00bcd4;
+    transform: translateY(-.33rem);
+}
+
+.icons a+a {
+    margin-left: 1.3rem;
 }
