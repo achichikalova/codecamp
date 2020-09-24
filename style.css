@@ -106,16 +106,22 @@ li {
 }
 
 .section-header h1 {
-    font-size: 5rem;
+    font-size: calc(10px + 5vw);
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .section-header h3 {
-    font-size: 3rem;
+    padding-top: 70px;
+    font-size: calc(10px + 3vw);
     text-transform: capitalize;
     font-style: italic;
     font-weight: 500;
+}
+
+.section-header p {
+    font-size: calc(10px + 1vw);
+    font-style: italic;
 }
 
 #video {
@@ -124,8 +130,6 @@ li {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 50vw;
-    height: 22rem;
 }
 
 #video iframe {
@@ -144,15 +148,6 @@ li {
     align-items: center;
     background: #333;
     color: #fff;
-}
-
-#feature .section-header h3 {
-    font-size: 6rem;
-}
-
-#feature .section-header p {
-    font-size: 1.6rem;
-    font-style: italic;
 }
 
 .cards-box {
@@ -227,7 +222,7 @@ li {
     font-size: 1.8em;
     z-index: 1;
     transition: .5s linear;
-    color: rgba(255, 255, 255, 0.5);
+    color: #00bcd4;
 }
 
 .content p {
@@ -268,7 +263,6 @@ li {
 #contact {
     position: relative;
     min-height: 100vh;
-    padding: 3.33rem 6.66rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +273,7 @@ li {
 }
 
 .contact {
-    width: 50vw;
+    width: 70vw;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -287,7 +281,7 @@ li {
     margin-top: 2rem;
     background-color: rgba(51, 51, 51, 0.6);
     border-radius: .33rem;
-    padding: 1.3rem;
+    padding: 0 1.3rem;
 }
 
 .contact__info {
@@ -452,4 +446,11 @@ footer {
 
 .icons a+a {
     margin-left: 1.3rem;
+}
+
+/* Media */
+@media only screen and (max-width: 600px) {
+    .contact {
+        flex-direction: column;
+    }
 }

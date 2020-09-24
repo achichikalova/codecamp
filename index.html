@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!--  <link rel="stylesheet" href="media.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Product Landing Page</title>
 </head>
@@ -15,7 +16,7 @@
         <div class="container" id="home">
             <div class="logo">
                 <img id="header-img" src="https://www.freepnglogos.com/uploads/sample-e-letter-logo-png-11.png"
-                    alt="Golden Company Logo">
+                    alt="Company Logo">
             </div>
             <div class="navigation">
                 <nav id="nav-bar">
@@ -35,9 +36,9 @@
             <h3>welcome to our studio!</h3>
             <h1>it's nice to meet you</h1>
         </div>
-        <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/zm7hX2R6Yyo" frameborder="1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></div>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/zm7hX2R6Yyo" frameborder="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
     </section>
     <main>
         <!-- Features -->
@@ -125,11 +126,11 @@
                 <form action="https://www.freecodecamp.com/email-submit" id="form">
                     <h2>Send Message</h2>
                     <div class="input-box">
-                        <input type="text" name="" id="" required>
+                        <input type="text" name="name" id="name" required>
                         <span>Full Name</span>
                     </div>
                     <div class="input-box">
-                        <input type="email" name="" id="" placeholder="lorem@ipsum.com" required>
+                        <input type="email" name="email" id="email" placeholder="lorem@ipsum.com" required>
                         <span>Email</span>
                     </div>
                     <div class="input-box">
@@ -137,7 +138,7 @@
                         <span>Type your Message...</span>
                     </div>
                     <div class="input-box">
-                        <input type="submit" name="" value="Send" required>
+                        <input type="submit" name="submit" id="submit" value="Send" required>
                     </div>
                 </form>
             </div>
