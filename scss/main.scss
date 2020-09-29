@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-areas: "header header header"
+        "sidebar content content";
 
 }
 
@@ -22,23 +26,22 @@ h6 {
     margin: 0;
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
 
 /* Colors */
+$background: rgba(#8F7B85, .3);
+$aside: #F5E1EB;
 $primary: #D785AD;
 $font: #333;
+$border: #90486B;
 
 /* Header */
 header {
+    grid-area: header;
     display: flex;
     align-items: center;
     width: 100vw;
     height: 70px;
-    background: rgb(209, 209, 209);
+    background: $background;
     overflow: hidden;
 
 }
@@ -52,6 +55,7 @@ header {
     .logo {
         img {
             position: absolute;
+            z-index: 1000;
             top: 10px;
             left: 70px;
             width: 60px;
@@ -131,12 +135,13 @@ header {
 /* Side Bar */
 
 .sidebar {
+    grid-area: sidebar;
     position: fixed;
     width: 300px;
     height: 100vh;
-    background: rgb(209, 209, 209);
+    background: $background;
     margin: 0;
-    padding: 0;
+    padding: 70px 0 0 0;
 
     #navbar {
         width: 90%;
@@ -188,5 +193,35 @@ header {
         &:hover {
             background: rgba(185, 185, 185, 0.3);
         }
+    }
+}
+
+/* / Side Bar */
+
+/* Main */
+
+main {
+    grid-area: content;
+    width: 90%;
+    margin: 0 auto;
+    font-size: calc(.5rem + 1vh);
+
+    section {
+        border-bottom: 3px solid $primary;
+    }
+
+    h3 {
+        margin: 20px;
+        text-align: center;
+        font-size: calc(1.1rem + 2vh);
+    }
+
+    aside {
+        margin: 15px;
+        padding: 10px 25px;
+        font-size: calc(.5rem + 1vh);
+        border-left: 4px solid $border;
+        background-color: $aside;
+
     }
 }
