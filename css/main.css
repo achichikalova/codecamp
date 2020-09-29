@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr 1fr;
+      grid-template-columns: 300px 1fr 1fr;
+      grid-template-areas: "header header header" "sidebar content content";
 }
 
 *,
@@ -21,15 +26,13 @@ h6 {
   margin: 0;
 }
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
 /* Colors */
 /* Header */
 header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +41,7 @@ header {
           align-items: center;
   width: 100vw;
   height: 70px;
-  background: #d1d1d1;
+  background: rgba(143, 123, 133, 0.3);
   overflow: hidden;
 }
 
@@ -55,6 +58,7 @@ header {
 
 .container .logo img {
   position: absolute;
+  z-index: 1000;
   top: 10px;
   left: 70px;
   width: 60px;
@@ -134,12 +138,15 @@ header {
 /* / Header */
 /* Side Bar */
 .sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
   position: fixed;
   width: 300px;
   height: 100vh;
-  background: #d1d1d1;
+  background: rgba(143, 123, 133, 0.3);
   margin: 0;
-  padding: 0;
+  padding: 70px 0 0 0;
 }
 
 .sidebar #navbar {
@@ -185,5 +192,35 @@ header {
 
 .sidebar .element:hover {
   background: rgba(185, 185, 185, 0.3);
+}
+
+/* / Side Bar */
+/* Main */
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: content;
+  width: 90%;
+  margin: 0 auto;
+  font-size: calc(.5rem + 1vh);
+}
+
+main section {
+  border-bottom: 3px solid #D785AD;
+}
+
+main h3 {
+  margin: 20px;
+  text-align: center;
+  font-size: calc(1.1rem + 2vh);
+}
+
+main aside {
+  margin: 15px;
+  padding: 10px 25px;
+  font-size: calc(.5rem + 1vh);
+  border-left: 4px solid #90486B;
+  background-color: #F5E1EB;
 }
 /*# sourceMappingURL=main.css.map */

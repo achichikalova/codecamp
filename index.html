@@ -27,8 +27,7 @@
             <ul>
                 <li class="title">
                     <div class="element"><a href="#What_is_involved_in_styling_text_in_CSS?">What is involved in styling
-                            text in
-                            CSS?</a></div>
+                            text in CSS?</a></div>
                 </li>
                 <li class="title">
                     <div class="element"><a href="#Fonts">Fonts</a></div>
@@ -43,11 +42,8 @@
                             <div class="element"><a href="#Font_size">Font size</a></div class="element">
                         </li>
                         <li>
-                            <div class="element"><a
-                                    href="#Font_style_font_weight_text_transform_and_text_decoration">Font style, font
-                                    weight,
-                                    text
-                                    transform, and text decoration</a></div>
+                            <div class="element"><a href="#Font_style_font_weight_text_transform_and_text_decoration">
+                                    Font style, font weight, text transform, and text decoration</a></div>
                         </li>
                     </ul>
                 </li>
@@ -68,8 +64,7 @@
                         </li>
                         <li>
                             <div class="element"><a href="#Other_properties_worth_looking_at">Other properties worth
-                                    looking
-                                    at</a></div>
+                                    looking at</a></div>
                     </ul>
                 </li>
                 <li class="title">
@@ -83,7 +78,41 @@
     </div>
     <main id="main-doc">
         <section class="main-section" id="What_is_involved_in_styling_text_in_CSS?">
-            <h3></h3>
+            <h3>What is involved in styling text in CSS?</h3>
+            <article>
+                <p>As you'll have already experienced in your work with HTML and CSS, text inside an element is laid
+                    out
+                    inside the element's content box. It starts at the top left of the content area (or the top right,
+                    in the case of RTL language content), and flows towards the end of the line. Once it reaches the
+                    end, it goes down to the next line and continues, then the next line, until all the content has been
+                    placed in the box. Text content effectively behaves like a series of inline elements, being laid out
+                    on lines adjacent to one another, and not creating line breaks until the end of the line is reached,
+                    or unless you force a line break manually using the <code>&lt;br&gt;</code> element.
+                </p>
+                <p>The CSS properties used to style text generally fall into two categories, which we'll look at
+                    separately in this article: </p>
+                <ul>
+                    <li><strong>Font styles</strong>: Properties that affect the font that is applied to the text,
+                        affecting
+                        what font is applied, how big it is, whether it is bold, italic, etc.
+                    </li>
+                    <li><strong>Text layout styles</strong>: Properties that affect the spacing and other layout
+                        features of
+                        the text, allowing manipulation of, for example, the space between lines and letters, and
+                        how the text is aligned within the content box.
+                    </li>
+                </ul>
+                <aside>
+                    <strong>Note:</strong> Bear in mind that the text inside an element is all affected as one single
+                    entity. You can't
+                    select and style subsections of text unless you wrap them in an appropriate element (such as a
+                    <code>&lt;span&gt;</code> or <code>&lt;strong&gt;</code>), or use a text-specific pseudo-element
+                    like
+                    ::first-letter (selects the first
+                    letter of an element's text), ::first-line (selects the first line of an element's text), or
+                    ::selection (selects the text currently highlighted by the cursor.)
+                </aside>
+            </article>
         </section>
     </main>
 </body>
