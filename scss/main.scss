@@ -1,7 +1,6 @@
 body {
     margin: 0;
 
-
 }
 
 *,
@@ -23,10 +22,10 @@ h6 {
     margin: 0;
 }
 
-
 ul,
 li {
     margin: 0;
+    padding: 0;
 }
 
 /* Colors */
@@ -71,7 +70,7 @@ header {
     width: var(--size);
     height: var(--size);
     padding: 3px;
-    transition: width 800ms ease-in-out;
+    transition: width 800ms cubic-bezier(1, -0.2, 0.76, 1.15);
     overflow: hidden;
 
     &__input {
@@ -85,11 +84,11 @@ header {
         bottom: 0;
         left: 0;
         background: transparent;
-        /*  background: rgba(blue, .5); */
         line-height: var(--size);
         opacity: 0;
         cursor: pointer;
         transition: opacity 300ms ease-in-out;
+
     }
 
     &__submit {
@@ -111,6 +110,7 @@ header {
         .search-bar__input {
             opacity: 1;
             cursor: initial;
+            width: 99%;
         }
 
         .search-bar__submit {
@@ -122,6 +122,71 @@ header {
             &:hover {
                 box-shadow: 0 0 10px rgba(0, 0, 0, .65);
             }
+        }
+    }
+}
+
+/* / Header */
+
+/* Side Bar */
+
+.sidebar {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: rgb(209, 209, 209);
+    margin: 0;
+    padding: 0;
+
+    #navbar {
+        width: 90%;
+        margin: 20px 0;
+
+        .title {
+            text-align-last: left;
+            line-height: 20px;
+            align-items: center;
+            border-top: 2px solid $primary;
+            padding: 15px;
+
+            &:last-child {
+                border-bottom: 2px solid $primary;
+            }
+        }
+
+        ul {
+
+            li {
+                list-style: none;
+                padding-left: 10px;
+
+
+                a {
+                    text-decoration: none;
+                    margin: 5px 10px 0 15px;
+                    font-size: 1.2rem;
+                    color: $font;
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+    }
+
+    ul {
+        padding-left: 10px;
+
+    }
+
+    .element {
+        width: 100%;
+        height: auto;
+
+
+        &:hover {
+            background: rgba(185, 185, 185, 0.3);
         }
     }
 }
