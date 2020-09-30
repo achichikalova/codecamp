@@ -24,46 +24,53 @@
     </header>
     <div class="sidebar">
         <nav id="navbar">
+            <header>Fundamental text <br> and font styling</header>
             <ul>
                 <li class="title">
-                    <div class="element"><a href="#What_is_involved_in_styling_text_in_CSS?">What is involved in styling
+                    <div class="element"><a class="nav-link" href="#What_is_involved_in_styling_text_in_CSS?">What is
+                            involved in styling
                             text in CSS?</a></div>
                 </li>
                 <li class="title">
-                    <div class="element"><a href="#Fonts">Fonts</a></div>
+                    <div class="element"><a class="nav-link" href="#Fonts">Fonts</a></div>
                     <ul>
                         <li>
-                            <div class="element"><a href="#Color">Color</a></div>
+                            <div class="element"><a class="nav-link" href="#Color">Color</a></div>
                         </li>
                         <li>
-                            <div class="element"><a href="#Font_families">Font families</a></div class="element">
+                            <div class="element"><a class="nav-link" href="#Font_families">Font families</a></div>
                         </li>
                         <li>
-                            <div class="element"><a href="#Font_size">Font size</a></div class="element">
+                            <div class="element"><a class="nav-link" href="#Font_size">Font size</a></div>
                         </li>
                         <li>
-                            <div class="element"><a href="#Font_style_font_weight_text_transform_and_text_decoration">
+                            <div class="element"><a class="nav-link"
+                                    href="#Font_style_font_weight_text_transform_and_text_decoration">
                                     Font style, font weight, text transform, and text decoration</a></div>
+                        </li>
+                        <li>
+                            <div class="element"><a class="nav-link" href="#Text_drop_shadows">Text drop shadows</a>
+                            </div>
                         </li>
                     </ul>
                 </li>
                 <li class="title">
-                    <div class="element"><a href="#Text_drop_shadows">Text drop shadows</a></div>
+                    <div class="element"><a class="nav-link" href="#Text_layout">Text layout</a></div>
                     <ul>
+
                         <li>
-                            <div class="element"><a href="#Text_layout">Text layout</a></div>
+                            <div class="element"><a class="nav-link" href="#Text_alignment">Text alignment</a></div>
                         </li>
                         <li>
-                            <div class="element"><a href="#Text_alignment">Text alignment</a></div>
+                            <div class="element"><a class="nav-link" href="#Line_height">Line height</a></div>
                         </li>
                         <li>
-                            <div class="element"><a href="#Line_height">Line height</a></div>
+                            <div class="element"><a class="nav-link" href="#Letter_and_word_spacing">Letter and word
+                                    spacing</a></div>
                         </li>
                         <li>
-                            <div class="element"><a href="#Letter_and_word_spacing">Letter and word spacing</a></div>
-                        </li>
-                        <li>
-                            <div class="element"><a href="#Other_properties_worth_looking_at">Other properties worth
+                            <div class="element"><a class="nav-link" href="#Other_properties_worth_looking_at">Other
+                                    properties worth
                                     looking at</a></div>
                     </ul>
                 </li>
@@ -78,7 +85,7 @@
     </div>
     <main id="main-doc">
         <section class="main-section" id="What_is_involved_in_styling_text_in_CSS?">
-            <h3>What is involved in styling text in CSS?</h3>
+            <h2>What is involved in styling text in CSS?</h2>
             <article>
                 <p>As you'll have already experienced in your work with HTML and CSS, text inside an element is laid
                     out
@@ -103,7 +110,8 @@
                     </li>
                 </ul>
                 <aside class="note">
-                    <strong>Note:</strong> Bear in mind that the text inside an element is all affected as one single
+                    <strong><strong>Note:</strong>:</strong> Bear in mind that the text inside an element is all
+                    affected as one single
                     entity. You can't
                     select and style subsections of text unless you wrap them in an appropriate element (such as a
                     <code>&lt;span&gt;</code> or <code>&lt;strong&gt;</code>), or use a text-specific pseudo-element
@@ -115,8 +123,8 @@
             </article>
         </section>
         <section class="main-section" id="Fonts">
-            <h3>Fonts</h3>
             <article>
+                <h3>Fonts</h3>
                 <p>Let's move straight on to look at properties for styling fonts. In this example we'll apply some
                     different CSS properties to the same HTML sample, which looks like this:</p>
                 <div class="code">
@@ -240,6 +248,399 @@
                             <td></td>
                         </tr>
                     </table>
+                    <aside class="note">
+                        <strong>Note:</strong>: Among various resources, the cssfontstack.com website maintains a list
+                        of web safe fonts
+                        available on Windows and macOS operating systems, which can help you make your decision about
+                        what you consider safe for your usage.
+                    </aside>
+                    <aside class="note">
+                        <strong>Note:</strong>: There is a way to download a custom font along with a
+                        webpage, to allow
+                        you to customize your font usage in any way you want: web fonts. This is a little bit more
+                        complex, and we will be discussing this in a separate article later on in the module.
+                    </aside>
+                    <h6>Default fonts</h6>
+                    <p>CSS defines five generic names for fonts: <code>serif</code>, <code>sans-serif</code>,
+                        <code>monospace</code>, <code>cursive</code> and
+                        <code>fantasy</code>.
+                        Those are very generic and the exact font face used when using those generic names is up to each
+                        browser and can vary for each operating system they are running on. It represents a <em>worst
+                            case scenario</em> where the browser will try to do its best to provide at least a font that
+                        looks appropriate. <code>serif</code>, <code>sans-serif</code> and <code>monospace</code> are
+                        quite predictable and should provide something
+                        reasonable. On the other hand, <code>cursive</code> and <code>fantasy</code> are less
+                        predictable and we recommend using
+                        them very carefully, testing as you go.</p>
+                    <p>The five names are defined as follows:</p>
+                    <table>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>serif</td>
+                            <td>Fonts that have serifs (the flourishes and other small details you see at the ends of
+                                the strokes in some typefaces)</td>
+                            <td style="font-family: serif;">My big red elephant</td>
+                        </tr>
+                        <tr>
+                            <td>sans-serif</td>
+                            <td>Fonts that don't have serifs.</td>
+                            <td style="font-family: sans-serif;">My big red elephant</td>
+                        </tr>
+                        <tr>
+                            <td>monospace</td>
+                            <td>Fonts where every character has the same width, typically used in code listings.</td>
+                            <td style="font-family: monospace;">My big red elephant</td>
+                        </tr>
+                        <tr>
+                            <td>cursive</td>
+                            <td>Fonts that are intended to emulate handwriting, with flowing, connected strokes.</td>
+                            <td style="font-family: cursive;">My big red elephant</td>
+                        </tr>
+                        <tr>
+                            <td>fantasy</td>
+                            <td>Fonts that are intended to be decorative.</td>
+                            <td style="font-family: fantasy;">My big red elephant</td>
+                        </tr>
+                    </table>
+                    <h6>Font stacks</h6>
+                    <p>Since you can't guarantee the availability of the fonts you want to use on your webpages (even a
+                        web font <em>could</em> fail for some reason), you can supply a <strong>font stack</strong> so
+                        that the browser has
+                        multiple fonts it can choose from. This simply involves a <code>font-family</code> value
+                        consisting of
+                        multiple font names separated by commas, e.g.</p>
+                    <div class="code">
+                        <code>p { <br>
+                            font-family: "Trebuchet MS", Verdana, sans-serif; <br>
+                            }</code>
+                    </div>
+                    <p>In such a case, the browser starts at the beginning of the list and looks to see if that font is
+                        available on the machine. If it is, it applies that font to the selected elements. If not, it
+                        moves on to the next font, and so on.</p>
+                    <p>It is a good idea to provide a suitable generic font name at the end of the stack so that if none
+                        of the listed fonts are available, the browser can at least provide something approximately
+                        suitable. To emphasise this point, paragraphs are given the browser's default serif font if no
+                        other option is available — which is usually Times New Roman — this is no good for a sans-serif
+                        font!</p>
+                    <aside class="note">
+                        <strong>Note:</strong>: Font names that have more than one word — like <code>Trebuchet MS</code>
+                        — need to be
+                        surrounded by
+                        quotes, for example <code>"Trebuchet MS"</code>.
+                    </aside>
+                    <h6>A font-family example</h6>
+                    <p>Let's add to our previous example, giving the paragraphs a sans-serif font:</p>
+                    <div class="code">
+                        <code>p { <br>
+                            color: red; <br>
+                            font-family: Helvetica, Arial, sans-serif; <br>
+                            }</code>
+                    </div>
+                    <p>This gives us the following result:</p>
+                    <div class="result" style="font-family: Helvetica, Arial, sans-serif;">
+                        <h1>Tommy the cat</h1>
+
+                        <p>Well I remember it as though it were a meal ago...</p>
+
+                        <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
+                            may have nestled its way into his mighty throat. Many a fat alley rat
+                            had met its demise while staring point blank down the cavernous barrel of
+                            this awesome prowling machine. Truly a wonder of nature this urban
+                            predator — Tommy the cat had many a story to tell. But it was a rare
+                            occasion such as this that he did.</p>
+                    </div>
+                </div><!-- /section__inner -->
+            </article>
+        </section>
+        <section class="main-section" id="Font_size">
+            <article>
+                <h4>Font size</h4>
+                <p>In our previous module's CSS values and units article, we reviewed length and size units. Font size
+                    (set with the <code>font-size</code> property) can take values measured in most of these units (and
+                    others, such
+                    as percentages), however the most common units you'll use to size text are:
+                </p>
+                <ul>
+                    <li><code>px</code> (pixels): The number of pixels high you want the text to be. This is an absolute
+                        unit — it
+                        results in the same final computed value for the font on the page in pretty much any situation.
+                    </li>
+                    <li><code>ems</code>: 1 <code>em</code> is equal to the font size set on the parent element of the
+                        current element we are
+                        styling (more specifically, the width of a capital letter M contained inside the parent
+                        element.) This can become tricky to work out if you have a lot of nested elements with different
+                        font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you
+                        get used to it, and you can use <code>em</code> to size everything, not just text. You can have
+                        an entire
+                        website sized using <code>em</code>, which makes maintenance easy.
+                    </li>
+                    <li><code>rems</code>: These work just like <code>em</code>, except that 1 <code>rem</code> is equal
+                        to the font size set on the root
+                        element of the document (i.e. <code>&lt;html&gt;</code>), not the parent element. This makes
+                        doing
+                        the maths to
+                        work out your font sizes much easier, although if you want to support really old browsers, you
+                        might struggle — <code>rem</code> is not supported in Internet Explorer 8 and below.
+                    </li>
+                </ul>
+                <p>The <code>font-size</code> of an element is inherited from that element's parent element. This all
+                    starts with the
+                    root element of the entire document — <code>&lt;html&gt;</code> — the <code>font-size</code> of
+                    which
+                    is set to
+                    16 <code>px</code> as standard
+                    across browsers. Any paragraph (or another element that doesn't have a different size set by the
+                    browser) inside the root element will have a final size of 16 <code>px</code>. Other elements may
+                    have different
+                    default sizes, for example an <code>&lt;h1&gt;</code> element has a size of 2 <code>em</code> set by
+                    default, so it
+                    will have a final size of 32 <code>px</code>.
+                </p>
+                <p>Things become more tricky when you start altering the font size of nested elements. For example, if
+                    you had an <code>&lt;article&gt;</code> element in your page, and set its <code>font-size</code> to
+                    1.5 <code>em</code> (which would compute to
+                    24 <code>px</code> final size), and then wanted the paragraphs inside the
+                    <code>&lt;article&gt;</code>
+                    elements to have a
+                    computed font size of 20 <code>px</code>, what <code>em</code> value would you use?
+                </p>
+                <div class="code">
+                    <code>
+                        <span>&lt;!-- document base font-size is 16px --&gt;</span> <br>
+                        &lt;article&gt; <span>&lt;!-- If my font-size is 1.5em --&gt;</span> <br>
+                        &lt;p>My paragraph&lt;/p&gt; <span>&lt;!-- How do I compute to 20px font-size? --&gt;</span>
+                        <br>
+                        &lt;/article&gt;
+                    </code>
+                </div>
+                <p>You would need to set its <code>em</code> value to 20/24, or 0.83333333 <code>em</code>. The maths
+                    can be complicated, so you
+                    need to be careful about how you style things. It is best to use <code>rem</code> where you can, to
+                    keep things
+                    simple, and avoid setting the font-size of container elements where possible.
+                </p>
+                <div class="section__inner">
+                    <h6>A simple sizing example</h6>
+                    <p>When sizing your text, it is usually a good idea to set the base font-size of the document to 10
+                        px, so that then the maths is a lot easier to work out — required (r)em values are then the
+                        pixel font size divided by 10, not 16. After doing that, you can easily size the different types
+                        of text in your document to what you want. It is a good idea to list all your font-size rulesets
+                        in a designated area in your stylesheet, so they are easy to find.
+                    </p>
+                    <p>
+                        Our new result is like so:
+                    </p>
+                    <div class="code">
+                        <code>html { <br>
+                            font-size: 10px; <br>
+                            } <br>
+                            <br>
+                            h1 { <br>
+                            font-size: 5rem; <br>
+                            } <br>
+                            <br>
+                            p {<br>
+                            font-size: 1.5rem; <br>
+                            color: red; <br>
+                            font-family: Helvetica, Arial, sans-serif; <br>
+                            }</code>
+                    </div>
+                    <p></p>
+                    <div class="result" style="font-family: Helvetica, Arial, sans-serif;">
+                        <h1 style="font-size: 50px;">Tommy the cat</h1>
+
+                        <p style="font-size: 15px;">Well I remember it as though it were a meal ago...</p>
+
+                        <p style="font-size: 15px;">Said Tommy the Cat as he reeled back to clear whatever foreign
+                            matter
+                            may have nestled its way into his mighty throat. Many a fat alley rat
+                            had met its demise while staring point blank down the cavernous barrel of
+                            this awesome prowling machine. Truly a wonder of nature this urban
+                            predator — Tommy the cat had many a story to tell. But it was a rare
+                            occasion such as this that he did.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Font_style_font_weight_text_transform_and_text_decoration">
+            <article>
+                <h4>Font style, font weight, text transform, and text decoration</h4>
+                <p>CSS provides four common properties to alter the visual weight/emphasis of text:</p>
+                <ul>
+                    <li><code>font-style</code>: Used to turn italic text on and off. Possible values are as follows
+                        (you'll rarely
+                        use this, unless you want to turn some italic styling off for some reason):
+                        <ul>
+                            <li><code>normal</code>: Sets the text to the normal font (turns existing italics off.)</li>
+                            <li><code>italic</code>: Sets the text to use the italic version of the font if available;
+                                if not
+                                available, it will simulate italics with oblique instead.</li>
+                            <li><code>oblique</code>: Sets the text to use a simulated version of an italic font,
+                                created by slanting
+                                the normal version.</li>
+                        </ul>
+                    </li>
+                    <li><code>font-weight</code>: Sets how bold the text is. This has many values available in case you
+                        have many
+                        font variants available (such as -light, -normal, -bold, -extrabold, -black, etc.), but
+                        realistically you'll rarely use any of them except for <code>normal</code> and
+                        <code>bold</code>:
+                        <ul>
+                            <li><code>normal</code>, <code>bold</code>: Normal and bold font weight</li>
+                            <li><code>lighter</code>, <code>bolder</code>: Sets the current element's boldness to be one
+                                step lighter or heavier
+                                than its parent element's boldness.</li>
+                            <li><code>100</code>–<code>900</code>: Numeric boldness values that provide finer grained
+                                control than the above
+                                keywords, if needed. </li>
+                        </ul>
+                    </li>
+                    <li><code>text-transform</code>: Allows you to set your font to be transformed. Values include:
+                        <ul>
+                            <li><code>none</code>: Prevents any transformation.</li>
+                            <li><code>uppercase</code>: Transforms ALL TEXT TO CAPITALS.</li>
+                            <li><code>lowercase</code>: Transforms all text to lower case.</li>
+                            <li><code>capitalize</code>: Transforms all words to Have The First Letter Capitalized.</li>
+                            <li><code>full-width</code>: Transforms all glyphs to be written inside a fixed-width
+                                square, similar to
+                                a monospace font, allowing aligning of e.g. Latin characters along with Asian language
+                                glyphs (like Chinese, Japanese, Korean).</li>
+                        </ul>
+                    </li>
+                    <li><code>text-decoration</code>: Sets/unsets text decorations on fonts (you'll mainly use this to
+                        unset the
+                        default underline on links when styling them.) Available values are:
+                        <ul>
+                            <li><code>none</code>: Unsets any text decorations already present.</li>
+                            <li><code>underline</code>: <span style="text-decoration: underline;">Underlines the
+                                    text.</span></li>
+                            <li><code>overline</code>: <span style="text-decoration: overline;">Gives the text an
+                                    overline.</span></li>
+                            <li><code>line-through</code>: <span style="text-decoration: line-through;">Puts a
+                                    strikethrough over the text.</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>You should note that <code>text-decoration</code> can accept multiple values at once, if you want
+                    to add
+                    multiple
+                    decorations simultaneously, for example <span
+                        style="text-decoration: underline overline;"><code>text-decoration: underline
+                            overline</code></span>. Also
+                    note that
+                    <code>text-decoration</code> is a shorthand property for <code>text-decoration-line</code>,
+                    <code>text-decoration-style</code>, and
+                    <code>text-decoration-color</code>. You can use combinations of these property values to create
+                    interesting
+                    effects, for example <span style="text-decoration: line-through red wavy;"><code>text-decoration:
+                            line-through red
+                            wavy</code></span>.</p>
+                <p>Let's look at adding a couple of these properties to our example:</p>
+                <p>Our new result is like so:</p>
+                <div class="code">
+                    <code>
+                        html { <br>
+                        font-size: 10px; <br>
+                        } <br>
+                        <br>
+                        h1 {<br>
+                        font-size: 5rem;<br>
+                        text-transform: capitalize;<br>
+                        }<br>
+                        <br>
+                        h1 + p {<br>
+                        font-weight: bold;<br>
+                        }<br>
+                        <br>
+                        p {<br>
+                        font-size: 1.5rem;<br>
+                        color: red;<br>
+                        font-family: Helvetica, Arial, sans-serif;<br>
+                        }
+                    </code>
+                </div>
+                <p></p>
+                <div class="result">
+                    <h1 style="font-size: 50px; text-transform: capitalize;">Tommy the cat</h1>
+
+                    <p style="font-size: 15px;  font-weight: bold; font-family: Helvetica, Arial, sans-serif;">Well I
+                        remember it as though it were a meal ago...</p>
+
+                    <p style="font-size: 15px;  font-family: Helvetica, Arial, sans-serif;">Said
+                        Tommy the Cat as he reeled back to clear whatever foreign
+                        matter
+                        may have nestled its way into his mighty throat. Many a fat alley rat
+                        had met its demise while staring point blank down the cavernous barrel of
+                        this awesome prowling machine. Truly a wonder of nature this urban
+                        predator — Tommy the cat had many a story to tell. But it was a rare
+                        occasion such as this that he did.</p>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Text_drop_shadows">
+            <article>
+                <h4>Text drop shadows</h4>
+                <p>You can apply drop shadows to your text using the <code>text-shadow</code> property. This takes up to
+                    four values,
+                    as shown in the example below:
+                </p>
+                <div class="code">
+                    <code>
+                        text-shadow: 4px 4px 5px red;
+                    </code>
+                </div>
+                <p>The four properties are as follows:</p>
+                <ol>
+                    <li>The horizontal offset of the shadow from the original text — this can take most available CSS
+                        length and size units, but you'll most commonly use <code>px</code>; positive values move the
+                        shadow right,
+                        and negative values left. This value has to be included.</li>
+                    <li>The vertical offset of the shadow from the original text; behaves basically just like the
+                        horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be
+                        included.</li>
+                    <li>The blur radius — a higher value means the shadow is dispersed more widely. If this value is not
+                        included, it defaults to 0, which means no blur. This can take most available CSS length and
+                        size units.</li>
+                    <li>The base color of the shadow, which can take any CSS color unit. If not included, it defaults to
+                        <code>black</code>.</li>
+                </ol>
+                <div class="section__inner">
+                    <h6>Multiple shadows</h6>
+                    <p>You can apply multiple shadows to the same text by including multiple shadow values separated by
+                        commas, for example:</p>
+                    <div class="code">
+                        <code>
+                            text-shadow: 1px 1px 1px red, <br>
+                            2px 2px 1px red;
+                        </code>
+                    </div>
+                    <p>If we applied this to the <code>&lt;h1&gt;</code> element in our Tommy the cat example, we'd end
+                        up
+                        with this:</p>
+                    <div class="result">
+                        <h1 style="font-size: 50px; text-shadow: 1px 1px 1px red,
+                        2px 2px 1px red;">Tommy the cat</h1>
+
+                        <p style="font-size: 15px;">Well I remember it as though it were a meal ago...</p>
+
+                        <p style="font-size: 15px;">Said Tommy the Cat as he reeled back to clear whatever foreign
+                            matter
+                            may have nestled its way into his mighty throat. Many a fat alley rat
+                            had met its demise while staring point blank down the cavernous barrel of
+                            this awesome prowling machine. Truly a wonder of nature this urban
+                            predator — Tommy the cat had many a story to tell. But it was a rare
+                            occasion such as this that he did.</p>
+                    </div>
+                    <aside class="note">
+                        Note: You can see more interesting examples of text-shadow usage in the Sitepoint article <a
+                            href="https://www.sitepoint.com/moonlighting-css-text-shadow/" target="_blank">Moonlighting
+                            with
+                            CSS text-shadow</a>.
+                    </aside>
                 </div>
             </article>
         </section>
