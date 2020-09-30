@@ -213,12 +213,12 @@ main section {
 main h3 {
   margin: 20px;
   text-align: center;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 main h4 {
-  margin: 15px;
-  padding: 0 25px;
+  margin: calc(1rem + .4vw);
+  padding: 0 25px 0 50px;
   display: inline-block;
   font-size: calc(1rem + .6vw);
   font-weight: normal;
@@ -233,7 +233,6 @@ main article {
 
 main article p {
   font-size: calc(1rem + .3vw);
-  line-height: calc(1rem + .8vw);
 }
 
 main article li {
@@ -243,14 +242,22 @@ main article li {
 
 main article .code {
   font-size: calc(1rem + .2vw);
-  font-family: Courier New;
+  font-family: monospace;
+  line-height: 1.5;
   padding: 20px;
   background: #FAF0F5;
   border-left: 5px solid #67344D;
 }
 
+main article .code span {
+  color: grey;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
 main article code {
   background: #FAF0F5;
+  margin-bottom: 20px;
 }
 
 main article .note {
@@ -282,6 +289,7 @@ main article .section__inner {
 main article .section__inner h6 {
   font-size: calc(1rem + .3vw);
   font-weight: bold;
+  margin: calc(1rem + .3vw);
 }
 
 main article .section__inner table {
