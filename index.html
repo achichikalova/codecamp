@@ -102,7 +102,7 @@
                         how the text is aligned within the content box.
                     </li>
                 </ul>
-                <aside>
+                <aside class="note">
                     <strong>Note:</strong> Bear in mind that the text inside an element is all affected as one single
                     entity. You can't
                     select and style subsections of text unless you wrap them in an appropriate element (such as a
@@ -110,10 +110,140 @@
                     like
                     ::first-letter (selects the first
                     letter of an element's text), ::first-line (selects the first line of an element's text), or
-                    ::selection (selects the text currently highlighted by the cursor.)
+                    ::selection (selects the text currently highlighted by the cursor).
                 </aside>
             </article>
         </section>
+        <section class="main-section" id="Fonts">
+            <h3>Fonts</h3>
+            <article>
+                <p>Let's move straight on to look at properties for styling fonts. In this example we'll apply some
+                    different CSS properties to the same HTML sample, which looks like this:</p>
+                <div class="code">
+                    <code>
+                        &lt;h1&gt;Tommy the cat&lt;/h1&gt; <br>
+                        <br>
+                        &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt; <br>
+                        <br>
+                        &lt;p&gt;Said Tommy the Cat as he reeled back to clear whatever foreign matter
+                        may have nestled its way into his mighty throat. Many a fat alley rat
+                        had met its demise while staring point blank down the cavernous barrel of
+                        this awesome prowling machine. Truly a wonder of nature this urban
+                        predator — Tommy the cat had many a story to tell. But it was a rare
+                        occasion such as this that he did.&lt;/p&gt;
+                    </code>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Color">
+            <h4>Color</h4>
+            <article>
+                <p>The <code>color</code> property sets the color of the foreground content of the selected elements
+                    (which is
+                    usually
+                    the text, but can also include a couple of other things, such as an underline or overline placed on
+                    text
+                    using the <code>text-decoration</code> property).</p>
+                <p><code>color</code> can accept any CSS color unit, for example:</p>
+                <div class="code">
+                    <code>p { <br>
+                        color: red; <br>
+                        }</code>
+                </div>
+                <p>This will cause the paragraphs to become red, rather than the standard browser default black, like
+                    so:</p>
+                <div class="result">
+                    <h1>Tommy the cat</h1>
+
+                    <p>Well I remember it as though it were a meal ago...</p>
+
+                    <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
+                        may have nestled its way into his mighty throat. Many a fat alley rat
+                        had met its demise while staring point blank down the cavernous barrel of
+                        this awesome prowling machine. Truly a wonder of nature this urban
+                        predator — Tommy the cat had many a story to tell. But it was a rare
+                        occasion such as this that he did.</p>
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Font_families">
+            <article>
+                <h4>Font families</h4>
+                <p>To set a different font on your text, you use the <code>font-family</code> property — this allows you
+                    to specify a
+                    font (or list of fonts) for the browser to apply to the selected elements. The browser will only
+                    apply a
+                    font if it is available on the machine the website is being accessed on; if not, it will just use a
+                    browser default font. A simple example looks like so:</p>
+                <div class="code"><code>p { <br>
+                        font-family: arial; <br>
+                        }</code></div>
+                <p>This would make all paragraphs on a page adopt the arial font, which is found on any computer.</p>
+                <div class="section__inner">
+                    <h6>Web safe fonts</h6>
+                    <p>Speaking of font availability, there are only a certain number of fonts that are generally
+                        available across all systems and can therefore be used without much worry. These are the
+                        so-called web safe fonts.
+
+                        Most of the time, as web developers we want to have more specific control over the fonts used to
+                        display our text content. The problem is to find a way to know which font is available on the
+                        computer used to see our web pages. There is no way to know this in every case, but the web safe
+                        fonts are known to be available on nearly all instances of the most used operating systems
+                        (Windows, macOS, the most common Linux distributions, Android, and iOS).
+
+                        The list of actual web safe fonts will change as operating systems evolve, but it's reasonable
+                        to consider the following fonts web safe, at least for now (many of them have been popularized
+                        thanks to the Microsoft Core fonts for the Web initiative in the late 90s and early 2000s):</p>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Generic type</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>Arial</td>
+                            <td>sans-serif</td>
+                            <td>It's often considered best practice to also add Helvetica as a preferred alternative to
+                                Arial as, although their font faces are almost identical, Helvetica is considered to
+                                have a nicer shape, even if Arial is more broadly available.</td>
+                        </tr>
+                        <tr>
+                            <td>Courier New</td>
+                            <td>monospace</td>
+                            <td>Some OSes have an alternative (possibly older) version of the Courier New font called
+                                Courier. It's considered best practice to use both with Courier New as the preferred
+                                alternative.</td>
+                        </tr>
+                        <tr>
+                            <td>Georgia</td>
+                            <td>monospace</td>
+                            <td>Some OSes have an alternative (possibly older) version of the Courier New font called
+                                Courier. It's considered best practice to use both with Courier New as the preferred
+                                alternative.</td>
+                        </tr>
+                        <tr>
+                            <td>Times New Roman</td>
+                            <td>serif</td>
+                            <td>Some OSes have an alternative (possibly older) version of the Times New Roman font
+                                called Times. It's considered best practice to use both with Times New Roman as the
+                                preferred alternative.</td>
+                        </tr>
+                        <tr>
+                            <td>Trebuchet MS</td>
+                            <td>sans-serif</td>
+                            <td>You should be careful with using this font — it isn't widely available on mobile OSes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Verdana</td>
+                            <td>sans-serif</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+
     </main>
 </body>
 

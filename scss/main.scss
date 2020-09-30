@@ -29,7 +29,9 @@ h6 {
 
 /* Colors */
 $background: rgba(#8F7B85, .3);
-$aside: #F5E1EB;
+$note: #F5E1EB;
+$code: #FAF0F5;
+$code-brd: #67344D;
 $primary: #D785AD;
 $font: #333;
 $border: #90486B;
@@ -204,24 +206,103 @@ main {
     grid-area: content;
     width: 90%;
     margin: 0 auto;
-    font-size: calc(.5rem + 1vh);
 
     section {
+        margin: 40px;
         border-bottom: 3px solid $primary;
     }
 
     h3 {
         margin: 20px;
         text-align: center;
-        font-size: calc(1.1rem + 2vh);
+        font-size: calc(1rem + 1vw);
     }
 
-    aside {
+    h4 {
         margin: 15px;
-        padding: 10px 25px;
-        font-size: calc(.5rem + 1vh);
-        border-left: 4px solid $border;
-        background-color: $aside;
-
+        padding: 0 25px;
+        display: inline-block;
+        font-size: calc(1rem + .6vw);
+        font-weight: normal;
+        font-family: Lucida Sans Unicode;
+        color: #fff;
+        background: $border;
     }
+
+    article {
+        padding-bottom: 40px;
+
+        p {
+            font-size: calc(1rem + .3vw);
+            line-height: calc(1rem + .8vw);
+        }
+
+        li {
+            font-size: calc(1rem + .3vw);
+            line-height: calc(1rem + .8vw);
+        }
+
+        .code {
+            font-size: calc(1rem + .2vw);
+            font-family: Courier New;
+            padding: 20px;
+            background: $code;
+            border-left: 5px solid $code-brd;
+        }
+
+        code {
+            background: $code;
+        }
+
+        .note {
+            margin: 15px;
+            padding: 10px 25px;
+            font-size: calc(.5rem + 1vh);
+            border-left: 5px solid $border;
+            background: $note;
+        }
+
+        .result {
+            border: 1px solid $border;
+            border-left: 5px solid $border;
+            padding: 20px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                color: red;
+            }
+        }
+
+        .section__inner {
+            padding: 20px 0;
+
+            h6 {
+                font-size: calc(1rem + .3vw);
+                font-weight: bold;
+            }
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td,
+            th {
+                border: 1px solid $background;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: rgba($background, .1);
+            }
+        }
+    }
+
+
+
 }
