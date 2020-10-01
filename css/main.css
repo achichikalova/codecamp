@@ -2,9 +2,17 @@ body {
   margin: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 1fr 1fr;
-      grid-template-columns: 300px 1fr 1fr;
-      grid-template-areas: "header header header" "sidebar content content";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+      grid-template-areas: "header header" "sidebar content";
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+        grid-template-areas: "header header" "sidebar sidebar" "content content";
+  }
 }
 
 *,
@@ -15,7 +23,7 @@ body {
 }
 
 /* * {
-border: 1px solid #f00 !important;
+    border: 1px solid #f00 !important;
 } */
 h1,
 h2,
@@ -31,7 +39,7 @@ h6 {
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: header;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,10 +47,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 70px;
   background: rgba(143, 123, 133, 0.3);
-  overflow: hidden;
 }
 
 .container {
@@ -77,6 +84,12 @@ header {
   -webkit-transition: width 800ms cubic-bezier(1, -0.2, 0.76, 1.15);
   transition: width 800ms cubic-bezier(1, -0.2, 0.76, 1.15);
   overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
 }
 
 .search-bar__input {
@@ -147,11 +160,28 @@ header {
   background: rgba(143, 123, 133, 0.3);
   margin: 0;
   padding: 70px 0 0 0;
+  /* Media */
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 100vw;
+    height: 270px;
+    overflow-y: scroll;
+    background: rgba(143, 123, 133, 0.3);
+  }
 }
 
 .sidebar #navbar {
   width: 90%;
   margin: 20px 0;
+}
+
+.sidebar #navbar header {
+  background: none;
+  font-size: 1.3rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
 }
 
 .sidebar #navbar .title {
@@ -199,15 +229,31 @@ header {
 main {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: content;
   width: 90%;
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+}
+
 main section {
   margin: 40px;
   border-bottom: 3px solid #D785AD;
+}
+
+main section header {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
 }
 
 main h3 {
@@ -307,5 +353,15 @@ main article .section__inner th {
 
 main article .section__inner tr:nth-child(even) {
   background-color: rgba(143, 123, 133, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 230px;
+  }
+}
+
+section header {
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */
