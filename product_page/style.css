@@ -55,7 +55,7 @@ li {
 }
 
 .logo img {
-    width: 120%;
+    width: 100%;
     height: auto;
     float: left;
 
@@ -129,6 +129,11 @@ li {
     font-style: italic;
 }
 
+.section-header span {
+    color: #00bcd4;
+    text-shadow: 1px 1px 1px #333;
+}
+
 #video {
     position: relative;
     display: flex;
@@ -136,6 +141,7 @@ li {
     justify-content: center;
     margin: 0 auto;
 }
+
 
 #video iframe {
     padding: .33rem;
@@ -151,8 +157,8 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #333;
-    color: #fff;
+    background: #fff;
+    color: #333;
 }
 
 .cards-box {
@@ -206,7 +212,7 @@ li {
 }
 
 .card-box:hover {
-    transform: translateY(-3.33rem);
+    transform: translateY(-0.33rem);
     box-shadow: 0 2.66rem 4.6rem rgba(0, 0, 0, 0.5);
 }
 
@@ -242,7 +248,7 @@ li {
     position: relative;
     display: inline-block;
     padding: 8px 1.3rem;
-    background: #000;
+    background: #00bcd4;
     margin-top: 1rem;
     border-radius: 1.3rem;
     text-decoration: none;
@@ -251,6 +257,7 @@ li {
     box-shadow: 0 .66rem 1.3rem rgba(0, 0, 0, 0.2);
 }
 
+/* 
 .card-box:nth-child(1) .content a {
     background: #2196f3;
 }
@@ -261,7 +268,7 @@ li {
 
 .card-box:nth-child(3) .content a {
     background: #97dc47;
-}
+} */
 
 /* ----------------------------------------------- */
 /* Contact Us */
@@ -272,9 +279,21 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #333;
+    padding-bottom: 70px;
+}
+
+#contact::after {
+    content: "";
     background: url('https://img.freepik.com/free-photo/wet-misted-glass-with-drops-water_23-2147905606.jpg?size=626&ext=jpg');
     background-size: cover;
-    color: #fff;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .contact {
@@ -335,6 +354,7 @@ li {
 .contact__form h2 {
     font-size: 1.3rem;
     font-weight: 500;
+    color: #fff;
 }
 
 .contact__form .input-box {
@@ -408,7 +428,7 @@ li {
 }
 
 .contact__form input[type="submit"]:hover {
-    width: 7.3rem;
+    background: #01abc2;
 }
 
 /* Footer */
@@ -417,7 +437,7 @@ footer {
     flex-direction: row;
     width: 100vw;
     height: 4.6rem;
-    background: #333;
+    background: #00bcd4;
     color: #fff;
     text-align: center;
     line-height: 4.6rem;
@@ -445,8 +465,8 @@ footer {
 }
 
 .icons i:hover {
-    color: #00bcd4;
-    transform: translateY(-.33rem);
+    text-shadow: 2px 2px 2px #333;
+    transform: translateY(-.13rem);
 }
 
 .icons a+a {
