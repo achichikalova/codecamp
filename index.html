@@ -4,32 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>FrontEnd Developer</title>
 </head>
 
 <body>
     <header>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#about"></a>About</li>
-                <li><a href="#projects"></a>Work</li>
-                <li><a href="#contact"></a>Contact</li>
-            </ul>
-        </nav>
-
+        <div class="container">
+            <div class="logo-container">
+                <h4 class="logo">&lt/&gt</h4>
+            </div>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="#welcome-section">About</a></li>
+                    <li><a class="nav-link" href="#projects">Portfolio</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hire-me">
+                <button class="btn">Hire Me</button>
+            </div>
+        </div>
     </header>
     <section id="welcome-section">
-        <h1></h1>
-    </section>
-    <section id="about">
-
-    </section>
-    <section id="projects">
-        <div class="projects-tile">
-
+        <div class="introduction">
+            <div class="intro-slash">
+                <span>&lt/&gt</span>
+            </div>
+            <div class="intro-text">
+                <h1>I, Tonya <span>&#128075;</span></h1>
+                <p class="type">FrontEnd Developer</p>
+            </div>
         </div>
     </section>
-    <section id="contact"></section>
+    <section id="projects">
+        <h2>My Portfolio</h2>
+        <div class="projects-tile">
+            <div class="project-card">
+                <img src="https://c.radikal.ru/c29/2010/ed/956219c705ba.png" alt="product page project printscreen">
+                <h3>Product Page</h3>
+                <p>CodeCampProject</p>
+            </div>
+            <div class="project-card">
+                <img src="https://a.radikal.ru/a02/2010/bb/4b93dc6f2923.png" alt="portfolio project printscreen">
+                <h3>Portfolio</h3>
+                <p>CodeCampProject</p>
+            </div>
+            <div class="project-card">
+                <img src="https://b.radikal.ru/b28/2010/37/6050e17d3ba5.png"
+                    alt="technical documentation page project printscreen">
+                <h3>Technical Documentation Page</h3>
+                <p>CodeCampProject</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="contact__form">
+                <form action="https://www.freecodecamp.com/email-submit" id="form">
+                    <h2>Contact Me</h2>
+                    <div class="input-box">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email" placeholder="lorem@ipsum.com" required>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Type your Message..."
+                            required></textarea>
+                    </div>
+                    <div class="input-box">
+                        <input class="btn" type="submit" name="submit" id="submit" value="Send" required></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="copy">&copy; Copyright 2020</div>
+            <div class="icons">
+                <a href="#"><i class="fa fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fab fab fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
