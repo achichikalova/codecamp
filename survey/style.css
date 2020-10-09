@@ -27,7 +27,7 @@ li {
 
 
 .survey {
-    max-width: 60vw;
+    max-width: 80vw;
     margin: 0 auto;
 }
 
@@ -40,9 +40,10 @@ h1 {
 
 form {
     height: auto;
-    background-color: #e8f0db;
+    background-color: #F9F6ED;
     border-radius: 20px;
     box-shadow: 5px 10px 10px 2px #e2e2e1;
+    padding-bottom: 20px;
 }
 
 ol,
@@ -53,11 +54,13 @@ li {
 
 fieldset {
     border: none;
-    background-color: #88b04b88;
+    background: #D8E5F7;
     margin: 20px;
     border-radius: 15px;
     padding: 15px;
 }
+
+
 
 legend {
     font-size: 20px;
@@ -90,23 +93,22 @@ textarea {
 
 button {
     background-color: #fff;
-    border: solid 1px #577030;
+    border: solid 1px #D8E5F7;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
-    color: #88B04B;
+    color: #000;
     display: block;
     font: 18px Georgia, "Times New Roman", Times, serif;
     letter-spacing: 1px;
     margin: auto;
     padding: 7px 25px;
-    text-shadow: 0 1px 1px #000000;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #8fb15d9d;
+    background-color: #D8E5F7;
     color: #fff;
 }
