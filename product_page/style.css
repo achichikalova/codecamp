@@ -231,18 +231,11 @@ nav {
     text-align: center;
 }
 
-.image-container {
-    display: flex;
-    width: 250px;
-    height: 160px;
-    overflow: hidden;
-    align-items: center;
-}
-
 .content img {
     width: 250px;
     height: auto;
     margin: 20px;
+    animation: drop 1.5s ease;
 }
 
 .content h3 {
@@ -553,4 +546,16 @@ footer {
     }
 
 
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
