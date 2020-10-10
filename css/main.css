@@ -259,6 +259,7 @@ section#projects .projects-tile .project-card .card-info {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   opacity: 0;
+  cursor: pointer;
 }
 
 section#projects .projects-tile .project-card .card-info .content {

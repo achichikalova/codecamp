@@ -177,6 +177,7 @@ section#projects {
                 background: rgba($primaryClr, .9);
                 transition: .5s ease;
                 opacity: 0;
+                cursor: pointer;
 
                 .content {
                     position: absolute;
