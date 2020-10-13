@@ -30,6 +30,7 @@ body {
     @include flexCenter;
 }
 
+/* Header */
 header {
     position: fixed;
     display: flex;
@@ -92,7 +93,7 @@ header {
     }
 }
 
-
+/* About */
 section#welcome-section {
     @include flexCenter;
     justify-content: start;
@@ -132,11 +133,16 @@ section#welcome-section {
             font-size: calc(2rem + 2vh);
             border-right: 4px solid black;
             width: 18ch;
+
+            &:hover {
+                animation-play-state: paused;
+            }
         }
 
     }
 }
 
+/* Projects */
 section#projects {
     @include flexCenter;
     flex-direction: column;
@@ -199,6 +205,7 @@ section#projects {
     }
 }
 
+/* Contact */
 section#contact {
     @include flexCenter;
     height: 90vh;
@@ -207,14 +214,38 @@ section#contact {
         @include sectionHeader;
     }
 
-
-    .contact__form {
+    .contact-form {
         @include flexCenter;
         width: 70vw;
+    }
 
+    #form {
+        @include flexCenter;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .input-box input:not(.btn),
+        .input-box textarea {
+            display: flex;
+            min-width: 500px;
+            height: auto;
+            min-height: 30px;
+            margin: 10px;
+            outline: none;
+        }
     }
 }
 
+/* Footer */
 footer {
     @include flexCenter;
     background: $primaryClr;
@@ -224,6 +255,28 @@ footer {
     .container {
         display: flex;
         justify-content: space-between;
+    }
+
+    .copy {
+        float: left;
+        ;
+    }
+
+    .icons {
+        float: right;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+
+            &:hover {
+                color: #000000;
+            }
+        }
+
+        i {
+            margin-left: 1.3rem;
+        }
     }
 }
 
