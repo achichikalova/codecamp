@@ -14,6 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .btn {
     font-family: 'Poppins', sans-serif;
     width: calc(6rem + 2vw);
@@ -23,12 +24,12 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1.2em;
+
+    &:hover {
+        color: #000;
+    }
 }
 
-.container {
-    width: 90%;
-    @include flexCenter;
-}
 
 /* Header */
 header {
@@ -39,9 +40,16 @@ header {
     margin: 0 auto;
     align-items: center;
     z-index: 1000;
-    background: rgba($color: #000000, $alpha: 1.0);
+    background: #000;
+
+    .container {
+        @include flexCenter;
+        width: 90%;
+        margin: 0 auto;
+    }
 
     .logo-container {
+        width: 100px;
         flex: 1;
         display: flex;
         justify-content: flex-start;
@@ -63,7 +71,7 @@ header {
 
         .nav-links {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
 
             .nav-link {
                 width: 100px;
@@ -208,39 +216,157 @@ section#projects {
 /* Contact */
 section#contact {
     @include flexCenter;
-    height: 90vh;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    margin: 10vh auto 0 auto;
 
     h2 {
         @include sectionHeader;
     }
 
-    .contact-form {
-        @include flexCenter;
-        width: 70vw;
+    .container {
+        width: 100%;
+        position: relative;
+        min-width: 80vw;
+        min-height: 550px;
+        display: flex;
+        z-index: 1000;
+
+        .contact-info {
+            position: absolute;
+            top: 40px;
+            left: 15%;
+            width: 350px;
+            height: calc(100% - 80px);
+            background: $primaryClr;
+            z-index: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+                color: #fff;
+                font-size: 1.7em;
+                font-weight: 500;
+                margin: 10px;
+            }
+
+            .info {
+                position: relative;
+                margin: 20px 0;
+
+                li {
+                    position: relative;
+                    list-style: none;
+                    display: flex;
+                    margin: 20px 0;
+
+                    span {
+                        margin: 0 20px;
+                        color: #fff;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+
+            .icons {
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 1.5em;
+
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+
+                i {
+                    margin-left: 1.3rem;
+                }
+            }
+        }
     }
 
-    #form {
+    .contact-form {
+        @include flexCenter;
+        position: absolute;
+        left: 25%;
+        padding: 20px 20px 20px 150px;
+        margin-left: 60px;
+        width: calc(60% - 150px);
+        height: 100%;
+        box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    form {
         @include flexCenter;
         flex-direction: column;
-        width: 90%;
-        height: auto;
+        height: 100%;
+        padding: 30px;
 
-        .float-left {
-            float: left;
-        }
-
-        .float-right {
-            float: right;
-        }
-
-        .input-box input:not(.btn),
-        .input-box textarea {
-            display: flex;
-            min-width: 500px;
-            height: auto;
-            min-height: 30px;
+        h2 {
+            color: $primaryClr;
             margin: 10px;
-            outline: none;
+        }
+
+        .form-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 30px;
+
+            .input-box {
+                position: relative;
+                margin: 0 0 35px 0;
+
+                &.w50 {
+                    width: 47%;
+                }
+
+                &.w100 {
+                    width: 100%;
+                }
+
+                textarea {
+                    min-height: 120px;
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 5px 0;
+                    font-size: 1.2em;
+                    color: #333;
+                    transition: .5s linear;
+                    pointer-events: none;
+                }
+
+                input:not(.btn),
+                textarea {
+                    width: 100% !important;
+                    padding: 5px 0;
+                    resize: none;
+                    font-size: 1.2em;
+                    color: #333;
+                    border: none;
+                    border-bottom: 1px solid #777;
+                    outline: none;
+
+                    &:focus~span,
+                    &:valid~span {
+                        transform: translateY(-30px);
+                        font-size: 1em;
+                        color: $primaryClr;
+                        font-weight: 600;
+                    }
+
+                }
+
+            }
         }
     }
 }
@@ -253,29 +379,31 @@ footer {
     color: #fff;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-    }
+        @include flexCenter;
+        width: 100%;
+        flex-wrap: wrap;
 
-    .copy {
-        float: left;
-        ;
-    }
-
-    .icons {
-        float: right;
-
-        a {
-            text-decoration: none;
-            color: #fff;
-
-            &:hover {
-                color: #000000;
-            }
+        .copy {
+            width: 50%;
+            float: left;
         }
 
-        i {
-            margin-left: 1.3rem;
+        .icons {
+            float: right;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.5em;
+
+                &:hover {
+                    color: #000000;
+                }
+            }
+
+            i {
+                margin-left: 1.3rem;
+            }
         }
     }
 }
@@ -292,6 +420,69 @@ footer {
 
     100% {
         width: 0ch;
+    }
+
+}
+
+/* Media Queries */
+/* @media only screen and (min-width: 320px) and (max-width: 479px) {
+    ...
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    ...
+}
+*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    section#welcome-section {
+        background-image: url('http://images.pexels.com/photos/4347366/pexels-photo-4347366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550&w=800');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    section#welcome-section .introduction .intro-slash {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1330px) and (-webkit-min-device-pixel-ratio: 1) {
+    section#contact .container .contact-info {
+        left: 15%;
+    }
+
+    section#contact .contact-form {
+        width: calc(60% - 110px);
+        left: 35%;
+        margin: 0;
+        padding: 10px 10px 10px 110px;
+    }
+
+    section#contact form h2 {
+        font-size: 2em;
+    }
+
+    section#contact form .form-box {
+        padding-top: 15px;
+    }
+
+    section#contact form .form-box .input-box.w50 {
+        width: 95%;
+    }
+
+    section#contact form .form-box .input-box {
+        margin: 0 0 20px 0;
+    }
+
+    section#contact form .form-box .input-box span {
+        font-size: 1rem;
+    }
+
+    section#contact form .form-box .input-box input:not(.btn):focus~span,
+    section#contact form .form-box .input-box input:not(.btn):valid~span,
+    section#contact form .form-box .input-box textarea:focus~span,
+    section#contact form .form-box .input-box textarea:valid~span {
+        font-size: 15px;
     }
 
 }
