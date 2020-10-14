@@ -1,14 +1,32 @@
-* {
+body {
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  width: 100vw;
+  overflow-x: hidden;
+  height: auto;
+}
+
+*,
+*:before,
+*:after {
+  /*  border: 1px solid red; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body {
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
 }
 
 .btn {
@@ -57,13 +75,11 @@ header .container {
 }
 
 header .logo-container {
-  width: 100px;
+  width: 10vw;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -149,6 +165,7 @@ section#welcome-section {
   height: 100vh;
   background: url("https://images.pexels.com/photos/4347366/pexels-photo-4347366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section#welcome-section .introduction {
@@ -222,7 +239,7 @@ section#projects {
 section#projects h2 {
   font-size: calc(2rem + 2vh);
   font-weight: 500;
-  margin: 10vh auto;
+  margin: 5vh auto;
 }
 
 section#projects h2 p {
@@ -302,6 +319,7 @@ section#contact {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  width: 100vw;
   height: 80vh;
   display: flex;
   margin: 10vh auto 0 auto;
@@ -310,7 +328,7 @@ section#contact {
 section#contact h2 {
   font-size: calc(2rem + 2vh);
   font-weight: 500;
-  margin: 10vh auto;
+  margin: 5vh auto;
 }
 
 section#contact h2 p {
@@ -510,8 +528,10 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   background: #9b2449;
+  width: 100vw;
   height: 10vh;
   color: #fff;
+  margin: 5vh auto 0 auto;
 }
 
 footer .container {
@@ -576,18 +596,58 @@ footer .container .icons i {
   }
 }
 
-/* Media Queries */
-/* @media only screen and (min-width: 320px) and (max-width: 479px) {
-    ...
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header .logo-container {
+    display: none;
+  }
+  section#contact {
+    height: auto;
+  }
+  section#contact .container .contact-info {
+    padding: 15px;
+    width: 300px;
+    height: calc(100% - 200px);
+  }
+  section#contact .container .contact-info h2 {
+    font-size: 1em;
+  }
+  section#contact .container .contact-info .info li span {
+    font-size: 1em;
+  }
+  section#contact form h2 {
+    font-size: 1em;
+    margin: 10px auto;
+  }
+  section#contact .container .contact-info {
+    display: block;
+    left: 5%;
+  }
+  section#contact .container .contact-info .info ul {
+    padding: 0;
+  }
+  section#contact .container .contact-info .icons {
+    margin-top: 50px;
+  }
+  section#contact .contact-form {
+    width: calc(60% - 60px);
+    left: 45%;
+    margin: 0;
+    padding: 10px 10px 10px 30px;
+  }
+  section#contact form .form-box {
+    padding: 5px 0;
+  }
+  section#contact form .form-box .input-box.w50 {
+    width: 95%;
+  }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    ...
-}
-*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1022px) {
+  header .logo-container {
+    display: none;
+  }
   section#welcome-section {
-    background-image: url("http://images.pexels.com/photos/4347366/pexels-photo-4347366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550&w=800");
+    background-image: url("http://images.pexels.com/photos/4347366/pexels-photo-4347366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600&w=750");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -595,15 +655,45 @@ footer .container .icons i {
   section#welcome-section .introduction .intro-slash {
     font-size: 2.5rem;
   }
+  section#contact {
+    height: auto;
+  }
+  section#contact form h2 {
+    font-size: 2.1em;
+    margin: 10px auto;
+  }
+  section#contact .container .contact-info {
+    display: block;
+    left: 10%;
+  }
+  section#contact .contact-form {
+    width: calc(60% - 60px);
+    left: 45%;
+    margin: 0;
+    padding: 10px 10px 10px 60px;
+  }
+  section#contact form .form-box {
+    padding: 5px 0;
+  }
+  section#contact form .form-box .input-box.w50 {
+    width: 95%;
+  }
 }
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1330px) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (min-device-width: 1023px) and (max-device-width: 1330px) and (-webkit-min-device-pixel-ratio: 1) {
+  section#welcome-section {
+    background-image: url("http://images.pexels.com/photos/4347366/pexels-photo-4347366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=700");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
   section#contact .container .contact-info {
     left: 15%;
   }
   section#contact .contact-form {
     width: calc(60% - 110px);
-    left: 35%;
+    left: 45%;
     margin: 0;
     padding: 10px 10px 10px 110px;
   }
