@@ -30,16 +30,15 @@ $(document).ready(function(){
     });
 
     var randomQuote = allQuotes[Math.floor(Math.random() * Math.floor(data.length))];
+    var getQuote = randomQuote();
 
     $('#text').text(randomQuote.text);
     $('#author').text(randomQuote.author)
 
-    $('#new-quote').click(() => {
-        $('#text').text(() => {
-            text = randomQuote.text();
-            return text;
-        });
-        $('#author').text(randomQuote.author)
-    });
+    /* $('#new-quote').click((previousQuote) => {
+        if($())
+        $('#text').text(getQuote.text);
+        $('#author').text(getQuote.author)
+    }); */
     
 });
