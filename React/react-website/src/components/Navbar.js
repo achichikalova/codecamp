@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import { Button } from './Button';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FaTypo3 } from 'react-icons/fa';
@@ -12,7 +12,6 @@ function Navbar() {
     const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
-
     const closeMobileMenu = () => setClick(false);
 
     const showButton = () => {
@@ -22,11 +21,9 @@ function Navbar() {
             setButton(true)
         }
     }
-    useEffect(() => {
-        showButton()
-    }, [])
+    useEffect(() => { showButton() }, []);
 
-    window.addEventListener('resize', showButton)
+    window.addEventListener('resize', showButton);
 
     return (
         <>
