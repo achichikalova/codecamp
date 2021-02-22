@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import './Navbar.css';
+import logo from '../images/logo.jpg'
 import { Link } from 'react-router-dom';
-import { FaTypo3 } from 'react-icons/fa';
 import { GoThreeBars } from "react-icons/go";
 import { MdClose } from 'react-icons/md';
 
@@ -29,41 +29,56 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>TRVL <FaTypo3 className='fa-typo3' /></Link>
+                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}><img src={logo} /></Link>
                 </div>
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <MdClose /> : <GoThreeBars />}
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Home
-              </Link>
+                        <Link 
+                            to='/' 
+                            className='nav-links' 
+                            onClick={closeMobileMenu}>
+                                Home</Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link 
+                            to='/about-us' 
+                            className='nav-links' 
+                            onClick={closeMobileMenu}>
+                                About Us</Link>
                     </li>
                     <li className='nav-item'>
                         <Link
-                            to='/services'
+                            to='/listings'
                             className='nav-links'
                             onClick={closeMobileMenu}
-                        >Services</Link>
+                        >Listings</Link>
                     </li>
                     <li className='nav-item'>
                         <Link
-                            to='/products'
+                            to='/testimonials'
                             className='nav-links'
                             onClick={closeMobileMenu}
-                        >Products</Link>
+                        >Testimonials</Link>
                     </li>
-
+                    <li className='nav-item'>
+                        <Link
+                            to='/sold'
+                            className='nav-links'
+                            onClick={closeMobileMenu}
+                        >Sold</Link>
+                    </li>                   
                     <li>
                         <Link
-                            to='/sign-up'
+                            to='/contact-us'
                             className='nav-links-mobile'
                             onClick={closeMobileMenu}
-                        >Sign Up</Link>
+                        >Contact Us</Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                {button && <Button link='/contact-us' buttonStyle='btn--outline'>CONTACT US</Button>}
             </nav>
         </>
     )
