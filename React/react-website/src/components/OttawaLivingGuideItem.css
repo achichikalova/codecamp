@@ -1,9 +1,9 @@
 .guide {
     padding: 4rem;
-    background: #fff;
+    background: #F2F2F2;
 }
 
-h1 {
+.guide h1 {
     text-align: center;
 }
 
@@ -65,7 +65,7 @@ h1 {
     max-width: calc((100%) - 60px);
     font-size: 12px;
     font-weight: 700;
-    color: #fff;
+    color: #F2F2F2;
     background-color: #1f98f4;
     box-sizing: border-box;
 }

@@ -3,9 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home'
 import Testimonials from './components/pages/Testimonials';
-import AboutUs from './components/pages/AboutUs';
 import ContactUs from './components/pages/ContactUs';
 import Listings from './components/pages/Listings';
+import OurTeam from './components/pages/OurTeam';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/about-us" exact component={AboutUs} />
+        <Route path="/our-team" exact component={OurTeam} />
         <Route path="/listings" exact component={Listings} />
         <Route path="/testimonials" exact component={Testimonials} />
         <Route path="/contact-us" exact component={ContactUs} />
