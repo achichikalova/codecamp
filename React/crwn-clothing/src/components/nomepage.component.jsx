@@ -1,17 +1,11 @@
 import React from 'react';
+import Directory from './directory/directiry.component';
 import './homepage.style.scss'
-import { MenuItem } from './menu-item/menu-item.component';
 
 export const HomePage = () => {
     return (
         <div className='homepage'>
-            <div className='directory-menu'>
-                <MenuItem title='HATS' />
-                <MenuItem title='HATS' />
-                <MenuItem title='HATS' />
-                <MenuItem title='HATS' />
-                <MenuItem title='HATS' />
-            </div>
+            <Directory />
         </div>
     )
 }
